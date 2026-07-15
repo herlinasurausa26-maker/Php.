@@ -1,0 +1,291 @@
+/* Gaya global untuk seluruh aplikasi */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f7;
+    color: #17213d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page-shell,
+.page-card {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #d8e2ef;
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 16px;
+    color: #102a43;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+nav,
+.page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    background: #0d6efd;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+nav a,
+.page-nav a,
+.page-card a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover,
+.page-nav a:hover,
+.page-card a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #111827;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="submit"],
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #0d6efd;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: #0b5ed7;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+table td {
+    vertical-align: top;
+    padding: 6px 8px;
+}
+
+input[type="radio"] {
+    margin-right: 6px;
+}
+
+p,
+.alert,
+.message {
+    margin: 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #d8e2ef;
+    margin: 18px 0;
+}
+
+.alert {
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #e7f1ff;
+    border: 1px solid #bfd7ff;
+    color: #0a3d62;
+}
+
+@media (max-width: 680px) {
+    .page-shell,
+    .page-card {
+        margin: 16px;
+        padding: 18px;
+    }
+
+    nav,
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Specific styles for the registration/edit form */
+form {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #e6eef7;
+    padding: 18px;
+    border-radius: 12px;
+    background: #fbfdff;
+}
+
+legend {
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #eef6ff;
+    font-weight: 700;
+    color: #0d3b66;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+input[type="button"].cancel-button {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 680px) {
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+}
+
+/* Enhanced registration form layout and summary */
+.welcome {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #123;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+/* Make field groups use the grid when wide */
+fieldset > label,
+fieldset > input,
+fieldset > textarea,
+fieldset > select {
+    width: 100%;
+}
+
+/* helper: two-column rows inside a fieldset */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.summary-list {
+    background: #ffffff;
+    border: 1px solid #e6eef7;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.summary-list li {
+    padding: 6px 8px;
+    border-bottom: 1px dashed #eef4fb;
+}
+
+.summary-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 880px) {
+    .form-grid,
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* small UI polish for links */
+a.button-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a.button-link:hover { background: #0b5ed7; }
